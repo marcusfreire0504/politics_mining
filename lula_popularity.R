@@ -30,6 +30,8 @@ Lula_clean <- tm_map(Lula_clean, content_transformer(tolower))
 Lula_clean <- tm_map(Lula_clean, removeWords,stopwords("portuguese"))
 Lula_clean <- tm_map(Lula_clean, removeNumbers)
 Lula_clean <- tm_map(Lula_clean, stripWhitespace)
-Lula_clean <- tm_map(Lula_clean, removeWords,c("Lula","não","que","como","nem","#","ele","uma","para","vai","com","tem","todo","quer","dilma,","querem","en,","são","por","pela","foi","dos","mas","sobre","fala","pode","dado","via","mais","tiver","quem","ter")
+Lula_clean <- tm_map(Lula_clean, removeWords,c("Lula","não","que","como","nem","#","ele","uma","para","vai",
+"com","tem","todo","quer","dilma,","querem","en,","são","por","pela","foi","dos","mas","sobre","fala","pode",
+"dado","via","mais","tiver","quem","ter")
 
 wordcloud(Lula_clean)
